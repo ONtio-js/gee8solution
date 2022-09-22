@@ -503,7 +503,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(280deg, #b38b00 50%, #035cdd 100%);
+  background: linear-gradient(280deg, yellow 0%, #035cdd 100%);
   -webkit-animation: preloader 1.3s linear infinite;
           animation: preloader 1.3s linear infinite;
 }
