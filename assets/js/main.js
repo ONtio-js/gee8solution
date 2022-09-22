@@ -9,7 +9,8 @@
     });
 
     /*--
-        Header Sticky
+        Header StickyorMsg"
+                        ></div>
     -----------------------------------*/
 
     window.onscroll = function () {
@@ -531,3 +532,59 @@
 
     const year = document.getElementById("year");
     year.innerHTML = new Date().getFullYear();
+
+    const form = document.querySelector(".form");
+
+    function handleSubmit(event){
+      event.preventDefault()
+      var status =  document.getElementById("alert");
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      // var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+      var subject = document.getElementById("subject");
+      var data = new FormData(event.target);
+      if (name != "" && email != "" && message != "" && subject != ""){
+        fetch(event.target.action,{
+          method: form.method,
+          body: data,
+          headers: {
+            Accept : "appilication/json"
+          },
+        })
+        .then((response) => {
+          status.innerHTML = "Your message has been Recieved";
+          status.classList.add("d-block")
+          status.classList.add("alert-success")
+          setTimeout(function(){
+            status.classList.add("d-none")
+          },3000);
+          status.classList.remove("d-none")
+          form.reset();
+        }) 
+        .catch((error) => {
+          status.innerHTML = "oops! something went wrong,Please contact via Phone";
+          status.classList.add("d-block")
+          status.classList.add("alert-danger")
+          setTimeout(function(){
+            status.classList.add("d-none")
+          },3000);
+          status.classList.remove("d-none")
+          form.reset();
+        }) 
+      
+    
+      }else{
+        status.innerHTML = "All Data are required";
+        status.classList.add("d-block")
+        status.classList.add("alert-danger")
+        setTimeout(function(){
+          status.classList.add("d-none")
+          status.classList.remove("alert-danger")
+        },3000);
+        status.classList.remove("d-none")
+        
+        form.reset();
+      }
+    }
+    form.addEventListener("submit",handleSubmit);
