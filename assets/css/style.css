@@ -496,7 +496,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   left: 50%;
   transform: translate(-50%,-50%);
 }
-
+.headedr-logo a img{
+  width: 20;
+  height: 20;
+}
 #preloader .preloader span {
   position: absolute;
   display: inline-block;
@@ -809,12 +812,19 @@ select {
 }
 
 .header-logo a img {
-  width: 150px;
+  width: 20%;
+  height: 20%;
+}
+.headedr-logo p{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: red;
 }
 
 @media only screen and (max-width: 1199px) {
   .header-logo a img {
-    width: 130px;
+    width: 20%;
+    height: 20%;
   }
 }
 
