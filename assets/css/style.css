@@ -810,9 +810,19 @@ select {
   justify-content: space-between;
   align-items: center;
 }
+.footer-widget-about .divi{
+  margin-left: 10%;
+  margin-bottom: -6%;
+}
 .footer-widget-about a img {
   width:20%;
   height:20%;
+  margin-left: 4%;
+  margin-bottom: 3%;
+}
+.footer-widget-about  p{
+  color:#87909c;font-weight: 600;margin: -3%  0  0 -9%;
+  font-size: 75%;
 }
 @media only screen and (max-width:1199px){
 .footer-widget-about a img {
@@ -820,21 +830,29 @@ select {
   height:15%;
   
 }
+.footer-widget-about  p{
+  color:#005de0;font-weight: 600;margin: -3%  0  0 -4%;
+  font-size: 75%;
 }
-.header-logo a img {
+}
+.header-logo a img{
   width: 20%;
   height: 20%;
 }
 .header-logo p{
   color:#005de0;font-weight: 600;margin: -5%  0  0 -15%;
 }
+.footer-widget-about  p{
+  color:#005de0;font-weight: 600;margin: -3%  0  0 -4%;
+  font-size: 75%;
+}
 @media only screen and (max-width: 1199px) {
-  .header-logo a img {
-    width: 15%;
-    height: 15%;
-    margin-left: 7%;
+  .header-logo a img,.offcanvas-logo a img{
+    width: 13%;
+    height: 13%;
+    margin-left: 5%;
   }
-  .header-logo p{
+  .header-logo p, .offcanvas-logo p{
     color:#005de0;font-weight: 600;margin: -3%  0  0 -4%;
     font-size: 75%;
   }
@@ -1695,12 +1713,8 @@ select {
   color: #005de0;
 }
 
-.offcanvas-logo a img {
-  width: 130px;
-}
-
 .offcanvas-menu {
-  padding: 30px 0;
+  padding: 0;
 }
 
 .offcanvas-menu .main-menu li {
