@@ -810,7 +810,17 @@ select {
   justify-content: space-between;
   align-items: center;
 }
-
+.footer-widget-about a img {
+  width:20%;
+  height:20%;
+}
+@media only screen and (max-width:1199px){
+.footer-widget-about a img {
+  width:15%;
+  height:15%;
+  
+}
+}
 .header-logo a img {
   width: 20%;
   height: 20%;
